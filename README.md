@@ -9,7 +9,7 @@
 ## Installation
 
 ```sh
-npm install -D remark-code-import
+npm install -D @proto-kit/remark-code-import
 ```
 
 ## Setup

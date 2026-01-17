@@ -1,5 +1,5 @@
 {
-  "name": "remark-code-import",
+  "name": "@proto-kit/remark-code-import",
   "description": "📝 Populate code blocks from files",
   "version": "1.2.0",
   "engines": {
@@ -8,7 +8,7 @@
   "type": "module",
   "exports": "./dist/index.js",
   "types": "./dist/index.d.ts",
-  "author": "Kai Hao",
+  "author": "Protokit & Kai Hao",
   "license": "MIT",
   "homepage": "https://github.com/kevin940726/remark-code-import#readme",
   "repository": {
@@ -33,7 +33,8 @@
   "scripts": {
     "build": "tsc",
     "test": "vitest",
-    "prepare": "npm run build && npm test -- run"
+    "prepare": "npm run build && npm test -- run",
+    "publish": "npm publish --access public"
   },
   "dependencies": {
     "strip-indent": "^4.0.0",
