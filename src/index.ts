@@ -81,9 +81,15 @@ function transformDoc(
     } else {
       const array = groups[el.group];
       if(array && array.length < 2) {
-        console.error(`Group ${el.group} not found in document`)
+        console.error(`Group ${el.group} not found in document`);
       }
-      const group = content.slice(array.shift()! + 1, array.shift());
+      if(!array){
+        throw new Error(`Group ${el.group} not found in document`);
+      }
+      const group = content
+        .slice(array.shift()! + 1, array.shift())
+        // Filter out all group definition lines
+        .filter(line => getGroup(line) === undefined);
       // Not sure if that is necessary
       groups[el.group] = array;
       return group;
